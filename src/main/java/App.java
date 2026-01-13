@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("첫 번째 숫자를 입력하세요: ");
+        int posint1 = scanner.nextInt(); // 입력받은 integer posint1에 담기
+
+        System.out.println("두 번째 숫자를 입력하세요: ");
+        int posint2 = scanner.nextInt(); // 입력받은 integer posint2에 담기
+
+    }
+}
