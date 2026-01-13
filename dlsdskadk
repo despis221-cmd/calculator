@@ -1,0 +1,23 @@
+[33mcommit 20274c9d4dc9c5145cee62f82eda6885ca0d8530[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: despis221-cmd <despis221@gmail.com>
+Date:   Tue Jan 13 15:12:26 2026 +0900
+
+    반복문 사용하기
+
+[33mcommit 422d5b3c4adf4b887b0022c51ffd12c928a0426e[m
+Author: despis221-cmd <despis221@gmail.com>
+Date:   Tue Jan 13 14:52:02 2026 +0900
+
+    결과값 출력하기
+
+[33mcommit b0b907803e3efa82ea1cc8925d18f94f9aaed9ff[m
+Author: despis221-cmd <despis221@gmail.com>
+Date:   Tue Jan 13 13:01:20 2026 +0900
+
+    사칙연산 기호를 입력받기
+
+[33mcommit cf1757e569e8b4c27618dd72f7f7a36a3fc784fd[m
+Author: despis221-cmd <despis221@gmail.com>
+Date:   Tue Jan 13 12:59:40 2026 +0900
+
+    양의 정수(0 포함)를 입력 받기
