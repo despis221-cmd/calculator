@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class Calculator {
 
-    ArrayList<Integer> resultList = new ArrayList<>(); // 결과 저장할 리스트
+    private ArrayList<Integer> resultList = new ArrayList<>(); // 결과 저장할 리스트
+    // 외부 접근 불가
 
     public int calculate(int posint1, int posint2, char ops) {
 
@@ -39,5 +40,13 @@ public class Calculator {
             resultList.add(result);
         }
         return result;
+    }
+
+    public ArrayList<Integer> getResultList() { // 간접 접근으로 필드 값 가져옴
+        return resultList;
+    }
+
+    public void setResultList(ArrayList<Integer> resultList) { // 간접 접근으로 필드 값 수정
+        this.resultList = resultList;
     }
 }

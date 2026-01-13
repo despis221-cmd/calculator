@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -18,12 +19,17 @@ public class App {
 
             calculator.calculate(posint1, posint2, ops);
 
+            System.out.println("Getter 활용: " + calculator.getResultList()); // 저장된 리스트 가져와서 출력
+
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = scanner.next();
 
             if (exit.equals("exit")) { // exit 입력 시 반복 종료
                 System.out.println("계산기 종료");
                 break;
+            } else if (exit.equals("remove")) { // remove 입력 시 새로운 리스트 덮어쓰기 (기록 삭제)
+                calculator.setResultList(new ArrayList<>());
+                System.out.println("연산 기록 초기화");
             }
         }
     }
