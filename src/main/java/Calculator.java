@@ -1,14 +1,19 @@
 import java.util.ArrayList;
 
-public class Calculator {
+public class Calculator<T extends Number> {
+// T만 적으면 연산이 불가능하기 떄문에 숫자 타입으로 제한
 
-    private ArrayList<Integer> resultList = new ArrayList<>(); // 결과 저장할 리스트
+    private ArrayList<Double> resultList = new ArrayList<>(); // 결과 저장할 리스트
     // 외부 접근 불가
 
-    public int calculate(int posint1, int posint2, char ops) {
+    public double calculate(T posint1, T posint2, char ops) {
 
-        int result = 0;
+        double result = 0;
         boolean error = false; // 상태 확인
+
+        double num1 = posint1.doubleValue(); // Number 클래스가 제공하는 double을 사용하여 변환
+        double num2 = posint2.doubleValue();
+        // 제네릭 타입은 연산이 불가한 것 같아 추가 자료를 더 찾아보았다.
 
         OperatorType operatorType = OperatorType.calssify(ops); // enum
 
@@ -18,20 +23,20 @@ public class Calculator {
         } else {
             switch (operatorType) {
                 case PLUS:
-                    result = posint1 + posint2;
+                    result = num1 + num2;
                     break;
                 case MINUS:
-                    result = posint1 - posint2;
+                    result = num1 - num2;
                     break;
                 case MULTIPLY:
-                    result = posint1 * posint2;
+                    result = num1 * num2;
                     break;
                 case DIVIDE:
-                    if (posint2 == 0) {
+                    if (num2 == 0) {
                         System.out.println("나눗셈 연산에서 분모(두 번째 정수)에 0이 입력될 수 없습니다.");
                         error = true; // 에러 발생
                     } else {
-                        result = posint1 / posint2;
+                        result = num1 / num2;
                     }
                     break;
             }
@@ -43,11 +48,11 @@ public class Calculator {
         return result;
     }
 
-    public ArrayList<Integer> getResultList() { // 간접 접근으로 필드 값 가져옴
+    public ArrayList<Double> getResultList() { // 간접 접근으로 필드 값 가져옴
         return resultList;
     }
 
-    public void setResultList(ArrayList<Integer> resultList) { // 간접 접근으로 필드 값 수정
+    public void setResultList(ArrayList<Double> resultList) { // 간접 접근으로 필드 값 수정
         this.resultList = resultList;
     }
 
