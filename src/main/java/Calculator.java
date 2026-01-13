@@ -49,4 +49,12 @@ public class Calculator {
     public void setResultList(ArrayList<Integer> resultList) { // 간접 접근으로 필드 값 수정
         this.resultList = resultList;
     }
+
+    public void removeResult() {
+        if(resultList.size() > 0) { // 저장된 값 있는지 확인
+            resultList.remove(0); // 가장 먼저 저장된 값 삭제
+        } else {
+            System.out.println("저장된 값이 없습니다.");
+        }
+    }
 }
