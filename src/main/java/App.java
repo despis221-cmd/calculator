@@ -4,15 +4,15 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
+        Calculator<Double> calculator = new Calculator<>();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("첫 번째 숫자를 입력하세요: ");
-            int posint1 = scanner.nextInt(); // 입력받은 integer posint1에 담기
+            double posint1 = scanner.nextDouble(); // 입력받은 값 posint1에 담기
 
             System.out.println("두 번째 숫자를 입력하세요: ");
-            int posint2 = scanner.nextInt(); // 입력받은 integer posint2에 담기
+            double posint2 = scanner.nextDouble(); // 입력받은 값 posint2에 담기
 
             System.out.println("사칙연산 기호를 입력하세요: ");
             char ops = scanner.next().charAt(0); // 입력받은 문자의 첫 글자를 문자로 변환하여 ops에 담기
