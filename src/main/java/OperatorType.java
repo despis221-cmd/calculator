@@ -1,6 +1,6 @@
 public enum OperatorType { PLUS, MINUS, MULTIPLY, DIVIDE; // 연산자 묶기
 
-    public static OperatorType calssify(char ops) {
+    public static OperatorType classify(char ops) {
         if (ops == '+') return PLUS;
         if (ops == '-') return MINUS;
         if (ops == '*' || ops == 'x' || ops == 'X') return MULTIPLY;

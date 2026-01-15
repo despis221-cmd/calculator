@@ -32,6 +32,11 @@ public class App {
                 System.out.println("연산 기록 초기화");
             } else if (exit.equals("remove")) { // remove 입력 시 가장 먼저 저장된 값 삭제
                 calculator.removeResult();
+            } else if (exit.equals("inquiry")) { // 추가된 기능 호출
+                System.out.println("기준 값을 입력하세요: ");
+                double num = scanner.nextDouble();
+                System.out.println("기분 값보다 큰 결과 값: ");
+                calculator.inquiryResult(num);
             }
         }
     }

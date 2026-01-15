@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Calculator<T extends Number> {
 // T만 적으면 연산이 불가능하기 떄문에 숫자 타입으로 제한
@@ -15,7 +17,7 @@ public class Calculator<T extends Number> {
         double num2 = posint2.doubleValue();
         // 제네릭 타입은 연산이 불가한 것 같아 추가 자료를 더 찾아보았다.
 
-        OperatorType operatorType = OperatorType.calssify(ops); // enum
+        OperatorType operatorType = OperatorType.classify(ops); // enum
 
         if(operatorType == null) {
             System.out.println("올바른 연산자을 입력하세요. (Hint: + - * /)");
@@ -62,5 +64,11 @@ public class Calculator<T extends Number> {
         } else {
             System.out.println("저장된 값이 없습니다.");
         }
+    }
+
+    public List<Double> inquiryResult(double input) {
+        return resultList.stream()
+                .filter(result -> result > input) // 결과가 input보다 큰지 확인
+                .collect(Collectors.toList()); // 필터링된 결과를 리스트로 변환
     }
 }
